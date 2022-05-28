@@ -1,0 +1,1 @@
+wrangler pages publish --project-name isdjspowerworkingyet src

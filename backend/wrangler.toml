@@ -1,0 +1,8 @@
+name = "poweroutage"
+main = "src/index.ts"
+compatibility_date = "2022-05-28"
+account_id = "f788543279f18d593854c0bb8773519c"
+
+kv_namespaces = [
+    { binding = "KV", id = "9d1eeaa0024f4c62b74f8f6747da5592", preview_id = "dcf27307a2de4f97abef4f805e5d9a7d" }
+]
