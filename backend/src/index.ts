@@ -21,9 +21,23 @@ export default {
           "Access-Control-Allow-Origin": "*"
         }
       });
-    } else if (url.pathname.includes(env.TOKEN)) {
+    // Professional routing right here!!
+    } else if (url.pathname.includes(env.TOKEN) && url.pathname.includes("end")) {
       const data: any = await env.KV.get("data", "json");
       data.end = Date.now();
+      await env.KV.put("data", JSON.stringify(data));
+
+      return new Response("OK");
+    } else if (url.pathname.includes(env.TOKEN) && url.pathname.includes("comment")) {
+      const data: any = await env.KV.get("data", "json");
+      
+      const comment = request.headers.get("x-comment");
+      if (comment) {
+        data.comment = comment;
+      } else {
+        delete data.comment;
+      }
+
       await env.KV.put("data", JSON.stringify(data));
 
       return new Response("OK");

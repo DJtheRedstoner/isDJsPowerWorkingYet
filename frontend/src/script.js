@@ -24,7 +24,13 @@ const dayMS = hourMS * 24;
     }
     document.querySelector(".main").insertAdjacentElement("afterbegin", element);
 
-   
+    if (data.comment) {
+        const comment = document.createElement("p");
+        comment.className = "comment";
+        comment.innerHTML = data.comment;
+
+        document.querySelector(".time").insertAdjacentElement("afterend", comment);
+    }
 
     setInterval(() => {
         const diff = (poweron ?? Date.now()) - poweroff;
