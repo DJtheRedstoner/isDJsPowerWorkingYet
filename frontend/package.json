@@ -1,0 +1,13 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "publish": "wrangler pages publish --branch main src",
+    "publish:dev": "wrangler pages publish --branch dev src"
+  },
+  "dependencies": {
+    "@cloudflare/workers-types": "^3.11.0"
+  }
+}
