@@ -37,9 +37,16 @@ h1 {
 
 .footer {
     position: absolute;
-    left: 0;
     bottom: 0;
     padding: 10px;
+}
+
+.footer-l {
+    left: 0;
+}
+
+.footer-r {
+    right: 0;
 }
 
 .comment {
